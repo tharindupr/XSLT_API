@@ -1,0 +1,14 @@
+{
+  "name": "node-api",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "~1.0.1",
+    "express": "~4.0.0",
+    "express-xml-bodyparser": "^0.2.2",
+    "libxslt": "latest",
+    "mongoose": "~3.6.13",
+    "nan": "^2.0.9",
+    "python-shell": "^0.1.0",
+    "xml2js": "^0.4.12"
+  }
+}
