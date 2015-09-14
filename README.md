@@ -14,7 +14,7 @@ POST
 /api/plug?sender=HR
   To plug a XSL template in the name 'HR'
 
-api/create?id=HR
+/api/create?sender=HR
   To post the content according to the HR template
 
 
