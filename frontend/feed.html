@@ -1,22 +1,25 @@
-<html>
+<html ng-app="feed">
 <head>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="js/bootstrap.js"></script>
-<script src="js/angular.js"></script>
-<script src="js/jquery-1.11.3.js"></script>
 
+<script src="js/angular.min.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/app.js"></script>
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="container" ng-controller="getdata">
 
+<ul>
+	<li ng-repeat="item in data">{{item.name}}</li>
 
-
+</ul>
+Name: <input type="text" ng-model="name"/>{{ name }}
 
 
 <div id="page-wrapper">

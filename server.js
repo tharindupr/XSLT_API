@@ -9,13 +9,12 @@ var mongoose   = require('mongoose');
 var PythonShell = require('python-shell');
 var xmlparser = require('express-xml-bodyparser');
 
-
 app.use(xmlparser());
-//app.use(bodyParser());
+
+
 
 
 app.use('/api',require('./routes/api'));
-
 
 
 

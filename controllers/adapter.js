@@ -24,14 +24,15 @@ var options = {
   args: [req.query.sender, 'abc.xsl', 'value3']
 };
 
+
 PythonShell.run('adapter.py', options, function (err, results) {
-  if (err) throw err;
+  if (err) res.json({ message: 'invalid XSL format' });
   // results is an array consisting of messages collected during execution
+  else{
   console.log('results: %j', results);
+  res.json({ message: 'adapter plugged successfully' });
+  }
 })
-
-
-res.json({ message: 'adapter plugged successfully' });
 
 
 };
