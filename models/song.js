@@ -7,4 +7,5 @@ songId:String,
 name:String,
 artist:String
 });
+
 module.exports = mongoose.model('Post', PostSchema);
