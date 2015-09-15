@@ -8,12 +8,10 @@ var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
 var PythonShell = require('python-shell');
 var xmlparser = require('express-xml-bodyparser');
+var mongoose   = require('mongoose');
+mongoose.connect('mongodb://localhost/data');
 
 app.use(xmlparser());
-
-
-
-
 app.use('/api',require('./routes/api'));
 
 

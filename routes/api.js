@@ -3,7 +3,7 @@ var router = express.Router();
 
 var xmlController = require('../controllers/xmlconsumer');
 var adapterController = require('../controllers/adapter');
-
+var postController = require('../controllers/post');
 
 router.route('/plug')
 	
@@ -21,6 +21,11 @@ router.route('/create')
 	xmlController.create(req, res)
 	});
 
+
+router.route('/posts')
+
+
+	.get(postController.getPost);
 
 
 module.exports = router;
