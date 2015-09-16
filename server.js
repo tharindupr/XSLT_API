@@ -9,8 +9,11 @@ var mongoose   = require('mongoose');
 var PythonShell = require('python-shell');
 var xmlparser = require('express-xml-bodyparser');
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://localhost/data');
+var cors = require('cors');
 
+//db connection
+mongoose.connect('mongodb://localhost/data');
+app.use(cors());
 app.use(xmlparser());
 app.use('/api',require('./routes/api'));
 

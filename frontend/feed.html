@@ -34,29 +34,44 @@
                 </div>
                 <!-- /.row -->
 				
-				
-				<div class="panel panel-default column col-sm-8">
+				<div class="column col-sm-8">
+				<div class="panel panel-default ">
 										
 										<div class="panel-body">
 										  <p class="lead">Post</p>
-										  <p>45 Followers, 13 Posts</p>
+										  <div ng-bind-html="myHTML|to_trusted">
+												
+										  </div>
 										  
 										 
 										</div>
-									  </div>
 				</div>
+				
+				
+				
+				<div class="panel panel-default">
+										
+										<div class="panel-body">
+										  <p class="lead">Post</p>
+										  <div ng-bind-html="myHTML|to_trusted">
+												
+										  </div>
+										  
+										 
+										</div>
+				</div>
+				
+				</div>
+				
+			</div>
+				
+				
 
                 
 </div>
 
 	
-<ul>
-	<li ng-repeat="item in data">{{item.name}}</li>
 
-</ul>
-Name: <input type="text" ng-model="name"/>
-{{ name }}
-{{data}}
 
 
 	

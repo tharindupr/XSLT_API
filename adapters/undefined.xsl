@@ -1,5 +1,5 @@
-<?xml version="1.0"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<?xml version='1.0' encoding='UTF-8'?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
 <xsl:template match="/">
 <html>
@@ -31,14 +31,14 @@ font-style:italic;
 <body>
 <h2>Cool Tutorials</h2>
 <p>Hey, check out these tutorials!</p>
-  <xsl:apply-templates/>
+  <xsl:apply-templates />
 </body>
 </html>
 </xsl:template>
 
 <xsl:template match="tutorial">
-  <span class="tutorial-name"><xsl:value-of select="name"/></span>
-  <span class="tutorial-url"><xsl:value-of select="url"/></span>
+  <span class="tutorial-name"><xsl:value-of select="name" /></span>
+  <span class="tutorial-url"><xsl:value-of select="url" /></span>
 </xsl:template>
 
 </xsl:stylesheet>

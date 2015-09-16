@@ -1,5 +1,12 @@
 var feed=angular.module('feed',[]);
 
+angular.module('feed')
+    .filter('to_trusted', ['$sce', function($sce){
+        return function(text) {
+            return $sce.trustAsHtml(text);
+        };
+    }]);
+
 feed.service('dataService', function($http) {
 delete $http.defaults.headers.common['X-Requested-With'];
 this.getData = function(callbackFunc) {
@@ -18,21 +25,19 @@ this.getData = function(callbackFunc) {
 
 var controllers={};
 
-controllers.getdata=function($scope,$http,dataService)
+controllers.getdata=function($scope,$http,dataService,$sce)
 {
-	
-	
-
-	
-	
-	
 	 $scope.data = null;
      dataService.getData(function(dataResponse) {
-     $scope.data = dataResponse;
+     
+	 $scope.myHTML=dataResponse[0]['content'].replace(/,/g,"\n");
+
     });
+	
+	 
+	
+	
 };
-
-
 
 
 

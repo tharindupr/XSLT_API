@@ -26,7 +26,10 @@ var options = {
 
 
 PythonShell.run('parser.py', options, function (err, results) {
-	if (err) res.json({ message: 'failed' });	
+	if (err) {
+		console.log(err);
+		res.json({ message: 'failed' });
+	}	
 
 	else
 	{ 

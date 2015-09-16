@@ -11,7 +11,8 @@ dom = ET.parse("adapters//temp.xml")
 xslt = ET.parse("adapters//"+adapter)
 transform = ET.XSLT(xslt)
 newdom = transform(dom)
-print(ET.tostring(newdom, pretty_print=True))
+print(ET.tostring(newdom))
 f.write(ET.tostring(newdom, pretty_print=True))
 
 f.close()
+
