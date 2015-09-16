@@ -35,11 +35,11 @@
                 <!-- /.row -->
 				
 				<div class="column col-sm-8">
-				<div class="panel panel-default ">
+				<div class="panel panel-default " ng-repeat="item in data">
 										
 										<div class="panel-body">
 										  <p class="lead">Post</p>
-										  <div ng-bind-html="myHTML|to_trusted">
+										  <div ng-bind-html="item['content']|to_trusted">
 												
 										  </div>
 										  
@@ -48,18 +48,7 @@
 				</div>
 				
 				
-				
-				<div class="panel panel-default">
-										
-										<div class="panel-body">
-										  <p class="lead">Post</p>
-										  <div ng-bind-html="myHTML|to_trusted">
-												
-										  </div>
-										  
-										 
-										</div>
-				</div>
+			
 				
 				</div>
 				

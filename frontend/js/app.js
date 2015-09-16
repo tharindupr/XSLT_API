@@ -31,6 +31,12 @@ controllers.getdata=function($scope,$http,dataService,$sce)
      dataService.getData(function(dataResponse) {
      
 	 $scope.myHTML=dataResponse[0]['content'].replace(/,/g,"\n");
+	 for (i=0;i<dataResponse.length;i++)
+	 {
+		dataResponse[i]['content']=dataResponse[i]['content'].replace(/,/g,"\n");
+	 }
+ 
+	 $scope.data=dataResponse;
 
     });
 	
