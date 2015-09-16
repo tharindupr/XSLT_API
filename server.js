@@ -15,7 +15,9 @@ var cors = require('cors');
 mongoose.connect('mongodb://localhost/data');
 app.use(cors());
 app.use(xmlparser());
+
 app.use('/api',require('./routes/api'));
+app.use('/', express.static(__dirname + '/public'));
 
 
 
