@@ -1,44 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-
 <xsl:template match="/">
-<html>
-<head>
-<title>XML XSL Example</title>
-<style type="text/css">
-body
-{
-margin:10px;
-background-color:#ccff00;
-font-family:verdana,helvetica,sans-serif;
-}
 
-.tutorial-name
-{
-display:block;
-font-weight:bold;
-}
-
-.tutorial-url
-{
-display:block;
-color:#636363;
-font-size:small;
-font-style:italic;
-}
-</style>
-</head>
-<body>
-<h2>Cool Tutorials</h2>
-<p>Hey, check out these tutorials!</p>
-  <xsl:apply-templates />
-</body>
-</html>
+  <html>
+  <body>
+  <h2>My CD Collection</h2>
+    <table border="1">
+      <tr bgcolor="#9acd32">
+        <th style="text-align:left">Title</th>
+        <th style="text-align:left">Artist</th>
+      </tr>
+      <xsl:for-each select="catalog/cd">
+      <tr>
+        <td><xsl:value-of select="title" /></td>
+        <td><xsl:value-of select="artist" /></td>
+      </tr>
+      </xsl:for-each>
+    </table>
+  </body>
+  </html>
 </xsl:template>
-
-<xsl:template match="tutorial">
-  <span class="tutorial-name"><xsl:value-of select="name" /></span>
-  <span class="tutorial-url"><xsl:value-of select="url" /></span>
-</xsl:template>
-
 </xsl:stylesheet>
